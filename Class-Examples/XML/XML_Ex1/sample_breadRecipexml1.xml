@@ -15,7 +15,8 @@
     
     <!-- Ingredient list for recipe -->
     <ingredientlist>
-        <ingredient n="1">1 1/4 cups (160 grams) white bread flour, plus more for dusting</ingredient>
+        <ingredient type="flour" subtype="whiteBread" unit="cup" q="1.25+"/>
+        <ingredient type="flour" unit="cup" q="1.25" n="1">1 1/4 cups (160 grams) white bread flour, plus more for dusting</ingredient>
         <ingredient n="2">1/4 cup (38 grams) stone-ground whole-wheat flour</ingredient>
         <ingredient n="3">1/4 cup (32 grams) stone-ground whole rye flour</ingredient>
         <ingredient n="4">1/2 teaspoon instant yeast or bread machine yeast</ingredient>
@@ -26,7 +27,7 @@
     
     <!-- Steps for making recipe -->
     <steplist>
-        <step n="1">Whisk together the flours, yeast and salt in a mixing bowl. Combine the cider and water in a liquid measuring cup.</step>
+        <step n="1">Whisk together the <ingredient ref="1 2 3 4 5">flours, yeast and salt</ingredient> in a mixing bowl. Combine the cider and water in a liquid measuring cup.</step>
         <step n="2">Add the liquid to the flour mixture; use a spatula or bench scraper or your hand moistened with water to blend them for about a minute. The dough should be shaggy yet cohesive. Cover the bowl with a towel; let the dough rest for 20 minutes.</step>
         <step n="3">Moisten your kneading hand. If the dough seems stiff, add the optional tablespoon of water. Stretch one edge of the dough (still in the bowl), then press it into the center of the bowl. Repeat this about a dozen times, moving clockwise to catch all sides of the dough. (This should take 1 or 2 minutes.)</step>
         <step n="4">Turn the dough over so the seams are on the bottom. Cover and let rest for 20 minutes. Repeat the clockwise stretching and folding two more times, with 20-minute rests after each. Cover and refrigerate at least 8 hours and up to 24 hours. The dough should have doubled. If it hasn't, leave it on the counter until it does.</step>
