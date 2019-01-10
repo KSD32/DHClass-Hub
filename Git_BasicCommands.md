@@ -88,7 +88,7 @@ I
 ```
 esc : w q
 ```
-That's the escape key then colon, w, and q. This combination let's you escape out of the commit-editing window, then :wq is to write and quit the vi editor. This will bring you back to the terminal / command line prompt where you normally write git commands.
+That's the escape key, then colon, w, and q. This combination let's you escape out of the commit-editing window, then :wq is to write and quit the vi editor. This will bring you back to the terminal / command line prompt where you normally write git commands.
 
 * Now, type `git status` and it should tell you that you're ready to push two (or more) commits (the result of your merge plus your first commits that were never pushed). It should prompt you to do a `git push`. So do that. Type
 ```
@@ -97,7 +97,7 @@ git push
 And the merge should be resolved.
 
 ## Merge conflicts
-A variation on the merge issue above involves multiple team members working on a file and pushing at nearly the same time. The edits may be in locations where it is difficult for GitHub to automatically figure out how to merge them. When you attempt to pull these in, you will be told that GitHub cannot automatically complete the merge. Don't panic, but **do** be patient. 
+A variation on the merge issue above involves multiple team members working on a file and pushing at nearly the same time. The edits may be in locations where it is difficult for GitHub to automatically figure out how to merge them. When you attempt to pull these in, you will be told that GitHub cannot automatically complete the merge. **Don't panic, but do be patient.** 
 
 * First, you may want to inform your team members that there is a merge conflict and you're going to work on resolving it, and that they should wait to hear from you before trying any new commits. 
 
