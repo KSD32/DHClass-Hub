@@ -1,12 +1,12 @@
 DHClass-Hub
 ===========
 
-Welcome to the DH Class Hub! This is a repository to help introduce and orient Pitt students to the GitHub collaboration environment, and accompanies the course website posted at <a href="http://newtfire.org/dh/">http://newtfire.org/dh/</a>.
+Welcome to the DH Class Hub! This is a repository to help introduce and orient Pitt students to the GitHub collaboration environment, and accompanies the course website posted at <http://newtfire.org/dh/>.
 
 * In order for you to participate fully in this shared class space, I need to add you as a collaborator. Set up your own GitHub account and write to me to tell me how to find you. 
 
 * Now that you're here, you should try to "clone" this repository on your local computer. 
-* Read and follow the instructions here to get started with Git: <a href="http://newtfire.org/dh/explainGitShell.html">http://newtfire.org/dh/explainGitShell.html</a>
+* Read and follow the instructions here to get started with Git: <http://newtfire.org/dh/explainGitShell.html>
 
 * When you have set up an account and have installed the Git Bash shell locally on your computer, you are ready to experiment with pushing (or committing) new files to this repository. Save a file in your local folder (or the "clone" of this repository), and then use your GitHub client to "push" a file into this online collaboration space. To do this, first <strong>commit</strong> your changes and write the required commit message. Then you must <strong>push</strong> in order to sync these changes to the GitHub cloud. 
 
