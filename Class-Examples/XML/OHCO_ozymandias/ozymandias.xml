@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Ozymandias>
-    <Sentence1><line>I met a traveller from an antique land,</line>
-    <line>Who said—“Two vast and trunkless legs of stone </line>
+    <Sentence1><line><speaker id="frame" part="1"/>I met a traveller from an antique land,</line>
+        <line><speaker id="frame" part="1"/>Who said—“Two vast and trunkless legs of stone </line>
     <line>Stand in the desert. . . . Near them, on the sand,</line>
     <line>Half sunk a shattered visage lies, whose frown,</line>
     <line>And wrinkled lip, and sneer of cold command,</line>
