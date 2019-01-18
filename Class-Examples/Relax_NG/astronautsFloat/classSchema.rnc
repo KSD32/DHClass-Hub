@@ -1,14 +1,21 @@
 start = news
 news = element news{head, body}
 head = element head{headLine+, image*, byLine, info*, dateLine}
-body = element body{p+ | subHead*}
+body = element body{(p | subHead)+}
 subHead = element subHead {text}
 headLine = element headLine{text}
-image = element image {text}
-byLine = element byLine{text}
+image = element image {pic, caption}
+pic = element pic {file, empty}
+file = attribute file {xsd:anyURI}
+caption = element caption {mixed{person}}
+byLine = element byLine{mixed{person}}
 info = element info{text}
-dateLine = element dateLine{text}
-p = element p {mixed {person}}
+dateLine = element dateLine{(place | date)+}
+date = element date {when, text}
+when = attribute when {xsd:date | xsd:gYearMonth | xsd:gYear} 
+place = element place {text}
+p = element p {mixed {(person | event)*}}
+event = element event {when, text}
 person = element person {ref, text}
 ref = attribute ref {"#McCandless_B" | "#Noble_J"}
 
