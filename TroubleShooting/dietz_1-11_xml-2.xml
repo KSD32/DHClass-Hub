@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="dietz_1-11_relax-2.rnc" type="application/relax-ng-compact-syntax"?>
+<!-- BMT Good job on completeing XML exercise #2.  I like your use of comments in describing the content of the each part fo the letter.  I liked that you used elements and comments to inform the reader that some of the text in the document was either incomplete or destroyed.  --> 
+<document dType="letter" notes="autographed handwritten">
+    
+    <cast roster="AmyKirbyPost HarrietJacobs JohnSJacobs"/>
+    <cast aliases="AmyKirbyPost AmyKPost AmyPost Amy Post"/>
+    <!--ebb: EXCELLENT use of a plural list of attribute values to "decode" and consolidate data about these names. Hurrah!  -->
+    <cast aliases= "HarrietJacobs Harriet Jacobs"/>
+    <cast aliases= "JohnSJacobs JohnJacobs John Jacobs"/>
+    <!-- Cast stores metadata pertaining to people. 
+        'roster' attribute holds the entire list of important people in the document.
+        Aliases stores different attribute values that all refer to the same cast member, the most specific first.
+        This way, the less specific attribute values can be converted to the highest specific value if needed-->
+    <!--ebb: Really excellent use of XML comments to document your coding decisions! :-)  -->
+    
+    <source university="UniversityOfRochesterLibrary"/>
+    <!-- Source is where the document was retrieved from, not where it was written.
+         the attribute type itself gives the type of archive the document was retrieved
+         and the value gives the name of the archive itself. So, in this case, it's from a
+         university library, so the "university" attribute is used. -->
+    
+    <preScript>
+        <para><cast VIP="AmyKirbyPost">Amy Kirby Post</cast>, <!-- Please use the most specific value available for tagging VIPs in-text-->
+            <history movement="abolitionism">abolitionist</history> and <!-- History labels important references to... well, history. -->
+            <history movement="feminism">women's rights advocate</history>, befriended <cast VIP = "HarrietJacobs">Harriet</cast>
+            and urged her to write her autobiography. In this letter <cast VIP="HarrietJacobs">Harriet</cast>
+            expresses her reservations about telling of her ordeal. <excerpt qType="quote">"Your proposal to 
+            me has been thought over and over again but not with out some most painful rememberances."</excerpt>
+            <setting location="Cornwall OrangeCounty NY USA">Cornwall Orrange *Co* [New York]</setting>
+                <!-- Setting stores metadata about when and where the document was written.-->
+            <setting date="1852">[ndnm1852?]</setting>
+            <!-- "nm" and "nd" means that in this case we do not know the day or month, but we do know the year-->
+        </para>
+    </preScript>
+
+    
+    <body>
+        <greeting>My Dear Friend</greeting>
+        <para section="introduction">Yours of the 24 was recieved on the 27th and my pen will fail to describe my greatful
+            feelings on reading it although you could never be forgotten yet you do not know how
+            much itt cheers my sad heart and how much I appreciate a word of sympathy and friendship
+            from those I love for you little know how much I have had to pass through since we last
+            meet but it is a blessing that we can say a word in this way to each other many far more
+            deserving than myself has been debared from this privilege
+        </para>
+
+        <para section="main">I answered <cast extra = "Hallowell">Mrs Hallowell</cast> kind letter which I hope she <!-- extras are people not important to the document, esp. those-->
+            recieved I wrote <cast extra = "Bush">Mrs Bush</cast> also but I but I recieved a letter                <!-- we don't have enough information on to have their full name.-->
+            yesterday by the way of <setting mentLoc="NewYork NY USA">New York</setting> from her will you please<!-- mentLoc = a mentioned location-->
+            say that I had written I am sorry to have given her so much trouble but I have been unfortunate 
+            twice and I thought this would be more sure to come to hand my best love to her I am glad her 
+            hopes were realised in a sweet little Daughter and hope she may be blessed in having her health
+            and strength restored before she leaves our shores I am sorry to hear Dear little 
+            <cast extra = "William">Willie</cast> looks so delicate I should dearly love to see him and oh 
+            my dear friend how much I would prise a few hours with you at this present time but we poor mortals
+            must always strive to teach our hearts submission to our circumstances it is a hard lesson but it 
+            is a blessing to those who truly practice it 
+        </para>
+
+        <para section="main"><excerpt qType="quote">your proposal to me has been thought over and over again 
+            but not with out some most painful rememberances</excerpt> dear <cast VIP="AmyKirbyPost">Amy</cast>
+            if it was the life of a Heroine with no degradation associated with it far better to have been 
+            one of the starving poor of <setting mentLoc="Ireland">Ireland</setting> whose bones had to 
+            bleach on the highways than to have been a slave with the curse of slavery stamped upon yourself 
+            and Children your purity of heart and kindly sympathies won me at one time to speak of my 
+            children it is the only words that has passed my lips since I left my Mothers door I had 
+            determined to let others think as <format fType="typo">p</format> they pleased but my lips should
+            be sealed and no one had a right to question me for this reason when I first came North I avoided
+            the <history movement="abolitionism">Antislavery</history> people as much as possible because 
+            I felt that I could not be honest and tell the whole truth often—have I gone to my poor 
+            <cast VIP="JohnSJacobs">Brother</cast> with my grieved and mortified spirits he would mingle
+            his tears with mine while he would advise me to do what was right my conscience approved 
+            <format fType="insertion">*it*</format> but my stubborn pride would not yeild I have tried for 
+            the last two years to conquer it and I feel that God has helped me or I never would consent to 
+            give my past life to any one for I would not do it with out giving the whole truth if it could 
+            help save another from my fate it would be selfish and unchristian in me to keep it back situated 
+            as I am I do not see any way that I could put it forward <cast extra="Willis">Mrs Willis</cast> 
+            thinks it would do much good in <cast extra="Stowe">Mrs Stowe</cast> hand but I could not ask her 
+            to take any step <cast extra="Willis">Mr W</cast> is too <history movement="slavery">proslavery</history> 
+            he would tell me that it was very wrong and that I was trying to do harm or perhaps he was 
+            sorry for me to undertake <format fType="insertion">*it*</format> while I was in his family 
+            <cast extra="Willis">Mrs Willis</cast> thinks if is not done in my day it will a good legacy 
+            for my children to do it after my death but now is the time when their is so much excitement 
+            everywhere <cast extra="Hallowell">Mrs Hallowell</cast> said in her letter that you thought of 
+            going to New York in the course of a few weeks if you will let me know when I will meet you 
+            there I can give you my Ideas much better than write them 
+        </para>
+
+        <para section="main">if the Antislavery society could prapare this I would be willing to exert myself in
+            any way that they thought best for the welfare of the cause they do not know me they
+            have heard of me as <cast VIP="JohnSJacobs">John Jacobs</cast> sister 
+        </para>
+
+        <para section="conclusion">my dear friend would you be willing to make this proposal I would 
+            rather have you do it than any one else you could do it better I should be
+            <incomplete iType="obliterated"> . . . [obliterated]</incomplete> happier in                        <!-- Incomplete implies that the document is missing some text. -->
+            remembering it was you if <cast extra="Stowe">Mrs Stowe</cast> would under take it                 <!-- "obliterated" means that the text was destroyed, as opposed to-->
+            I should like to be with her a Month I should want the <format fType="strikethrough">first</format> <!-- "missing" (cannot be found) or "vapor" (author never finished it)-->
+            History of my childhood and the first five years in one volume and the next three and my 
+            home in the northern states in the secont besids I could give her some fine sketches 
+            for her pen on <history movement="slavery">slavery</history>
+            <salutation>give my love to your dear <cast extra="IsaacPost">Husband</cast> and sons 
+            kiss <cast extra="William">Willie</cast> for me love to all 
+            God bless Yours <excerpt signature="HarrietJacobs">Harriet</excerpt></salutation> 
+        </para>
+
+    </body>
+    
+    <postScript>
+        <para section = "main"><annotation>Notes: Autograph letter, signed; Isaac and Amy Post Family Papers, Isaac and Amy Post
+            Family Papers, University of Rochester Library.</annotation></para> <!-- here we have some little notes about our document. their info hss been placed up top -->
+    </postScript>
+    
+</document>
+<!--2019-01-16 BMT ebb: Check Plus!  Very impressive work on XML assignment 2!  We admire your use of attributes to make *explicit* the data that is *implicit* (or hidden/latent) in the letter. 
+The hierarchy of the document allows the reader to track the letter's data very efficiently, as you'll see when we get to the XPath and data processing portion of the course! 
+
+A suggestion for the <para> elements: You could either remonve the section attribute and replace it with an n='(n meaning number to give a numeric value to each paragraph)' to better organize the information.   Or you could change it to <para section"main" n"1"> and so on for the other two to better orgainze the information within the document.
+Keep up the excellent work for future assignments!-->
