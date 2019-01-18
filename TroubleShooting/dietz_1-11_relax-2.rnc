@@ -1,0 +1,73 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+#more will be added to the schema as needed. For now, this schema has elements
+# and attributes meant to comply with the marked up document
+start = document
+document = element document {dType,notes*,mixed{source+|body|(preScript|cast|postScript)*}}
+    dType = attribute dType{"letter"|"record"|"legal"|"transcript"}
+    
+    notes = attribute notes{"autographed"|"handwritten"|"typed"|"printOut"}
+    
+    source = element source{university|archive|library|private|empty}
+        
+        university = attribute university{xsd:ID}
+        
+        archive = attribute archive{xsd:ID}
+        
+        library = attribute library{xsd:string}
+        
+        private = attribute private{xsd:string}
+        
+    body = element body{mixed{greeting|salutation|para}}
+        
+        greeting = element greeting{text}
+        
+        salutation = element salutation{mixed{(cast|history|setting|excerpt|incomplete|salutation|format|annotation)*}}
+        
+        paraPatt = (section, mixed{(cast|history|setting|excerpt|incomplete|salutation|format|annotation)*})
+        
+        para = element para{paraPatt}
+            
+            section = attribute section{"introduction"|"main"|"conclusion"}
+            
+            history = element history{movement,text}
+                
+                movement = attribute movement{xsd:string}
+            
+            setting = element setting{(location|date|mentLoc),text}
+            
+                location = attribute location{xsd:string}
+                
+                date = attribute date{xsd:gYear|xsd:gYearMonth|xsd:date}
+                
+                mentLoc = attribute mentLoc{xsd:string}
+            
+            excerpt = element excerpt{(qType|signature),text}
+                qType = attribute qType{xsd:string}
+                
+                signature = attribute signature{xsd:string}
+            
+            incomplete = element incomplete{iType,text}
+                
+                iType = attribute iType{"obliterated"|"missing"|"vapor"}
+            
+            format = element format{fType,text}
+                
+                fType = attribute fType{"insertion"|"strikethrough"|"typo"}
+                
+            annotation = element annotation{text}
+    
+    preScript = element preScript{para}
+    
+    castPatt = ((roster?|aliases?|VIP?|extra?),text)
+    
+    cast = element cast{castPatt}                #I have questions for you about IDs and IDREFs. 
+                                                 #I'd like to you them for names, but I'm not sure how.
+        roster = attribute roster{xsd:string}
+        
+        aliases = attribute aliases{xsd:string}
+        
+        VIP = attribute VIP{xsd:string}
+        
+        extra = attribute extra{xsd:string}
+    
+    postScript = element postScript{para}
