@@ -1,0 +1,12 @@
+start = xml
+xml = element xml {correspondent, date?, letterBody}
+correspondent = element correspondent {sex, name*}
+sex = attribute sex {"Male" | "Female" | "Other"}
+name = attribute name {text}
+date = element date {datetime}
+datetime = attribute datetime (xsd:integer, xsd:integer, xsd:integer)
+lettrtBody = element letterBody {mixed{byronSkill?, (location, vocabulary, context)*}}
+byronSkill = attribute byronSkill {text}
+location = attribute location {text}
+vocabulary = element vocabulary {definition}
+definition = attribute {text}

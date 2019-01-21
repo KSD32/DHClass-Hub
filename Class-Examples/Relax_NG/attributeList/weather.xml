@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="listSchema.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    <forecast precip="sleet rain snow">Today's weather precipitation may involve a mix of rain, sleet, and snow.</forecast>
+</xml>
