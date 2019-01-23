@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--<?xml-model href="astronautsFloat.rnc" type="application/relax-ng-compact-syntax"?>-->
+<<<<<<< HEAD
 
 <?xml-model href="../../../../../classStarter.rnc" type="application/relax-ng-compact-syntax"?>
+=======
+<?xml-model href="astronautsFloat.rnc" type="application/relax-ng-compact-syntax"?>
+>>>>>>> 4c1b18bff30a868f4989f440d2e6ee1972a9c9b8
 <news>
     <head>
         <headLine>2 Astronauts Float Free in Space, 170 Miles Up</headLine>
