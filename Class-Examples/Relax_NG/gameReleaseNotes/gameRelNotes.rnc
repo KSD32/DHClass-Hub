@@ -1,4 +1,7 @@
 start = log
-log = element log {type, source, title }
+log = element log {type, source, title, intro }
 type = attribute type {"releaseNotes" | "updates"}
-source = element source {}
+source = element source {target, empty}
+target = attribute target {xsd:anyURI}
+intro = element intro {}
+

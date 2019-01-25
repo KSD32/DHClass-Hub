@@ -2,7 +2,7 @@
 <log type="releaseNotes">
     <source target="https://7daystodie.com/alpha-17-1-is-out/"/>
 <title>Alpha 17.1 Is Out!</title>
-Hey Survivalist,
+<intro>Hey Survivalist,
 
 We’ve just released Alpha 17.1 Stable and here are the official releases notes:
 
@@ -18,7 +18,7 @@ For builders, we have bolstered XP for harvesting and mining substantially allow
 
 If you have problems please visit our Alpha 17.1 Stable Bug Reporting Thread.
 
-We will continue to fix bugs, balance the game, and optimize in 17.2 coming soon.
+We will continue to fix bugs, balance the game, and optimize in 17.2 coming soon.</intro>
 
 A17.1 b9
 Added
