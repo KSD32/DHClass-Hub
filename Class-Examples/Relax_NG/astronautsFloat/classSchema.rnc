@@ -1,13 +1,15 @@
 start = news
 news = element news{head, body}
 head = element head{headLine+, image*, byLine, info*, dateLine}
-body = element body{p+ | subHead*}
+body = element body{(p | subHead)+}
+# ebb We need to simplify this choice for the computer parser and for human readers, so we removed repetition indicators after p and subHead, and set them in a parenthetical group. The parenthetical group then is set to evaluate one or more times, whether there is EITHER a p OR a subHead. 
 subHead = element subHead {text}
 headLine = element headLine{text}
 image = element image {pic, caption}
 byLine = element byLine{mixed{person*}}
 info = element info{text}
-dateLine = element dateLine{(place | date)}
+dateLine = element dateLine{place?, date}
+# ebb: My solution is to put these in a strict sequence, b/c I'm working for the press and we have standards! 
 date = element date {when, text}
 when = attribute when {xsd:date}
 place = element place{text}
