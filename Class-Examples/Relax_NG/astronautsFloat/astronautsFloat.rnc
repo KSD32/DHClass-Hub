@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 start = news
 news = element news {head, body}
 head = element head {headLine, image*, byLine, info?, dateLine}

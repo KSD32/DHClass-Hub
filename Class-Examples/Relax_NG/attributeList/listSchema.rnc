@@ -1,4 +1,4 @@
 start= xml
-xml = element xml {forecast}
+xml = element xml {forecast+}
 forecast = element forecast {precip, text}
-precip = attribute precip { list {("rain" | "sleet" | "snow")+}}
+precip = attribute precip { list {("rain"?, "sleet"?, "snow"?)+}}
